@@ -2,7 +2,7 @@ from pyspark.sql import *
 from pyspark.sql.functions import *
 from pyspark.sql import functions as F
 
-spark = SparkSession.builder.master("local").appName("HiteshProject").enableHiveSupport().getOrCreate()
+spark = SparkSession.builder.master("local").appName("mucteba").enableHiveSupport().getOrCreate()
 max_id = spark.sql("SELECT max(id) FROM people")
 m_id = max_id.collect()[0][0]
 str(m_id)
