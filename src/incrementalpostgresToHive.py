@@ -7,6 +7,7 @@ max_id = spark.sql("SELECT max(id) FROM person")
 m_id = max_id.collect()[0][0]
 str(m_id)
 
+#query
 query = 'SELECT * FROM person WHERE "ID" > ' + str(m_id)
 
 more_data = spark.read.format("jdbc") \
